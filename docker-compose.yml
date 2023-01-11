@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  rpcognito:
+    build: 
+      context: ./
+      dockerfile: rpcognito.dockerfile
+    ports:
+      - 4004:8080
+    environment:
+      PORT: 8080
+    volumes:
+      - ./:/app
